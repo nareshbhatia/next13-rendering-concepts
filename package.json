@@ -5,7 +5,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/next13-rendering-concepts/next13-rendering-concepts"
+    "url": "https://github.com/nareshbhatia/next13-rendering-concepts"
   },
   "workspaces": [
     "apps/*",
@@ -42,6 +42,8 @@
     "_lint:root:fix": "npm run --silent _lint:root -- --fix"
   },
   "devDependencies": {
+    "@code-shaper/nextjs": "latest",
+    "@code-shaper/react": "latest",
     "@commitlint/cz-commitlint": "^17.5.0",
     "@typescript-eslint/eslint-plugin": "^5.61.0",
     "code-shaper": "latest",
@@ -68,10 +70,5 @@
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
     }
-  },
-  "dependencies": {
-    "@code-shaper/express": "^1.1.2",
-    "@code-shaper/nextjs": "^1.1.1",
-    "@code-shaper/react": "^1.1.3"
   }
 }

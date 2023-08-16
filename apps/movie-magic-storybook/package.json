@@ -1,6 +1,6 @@
 {
-  "name": "@next13-rendering-concepts/next13-rendering-concepts-storybook",
-  "description": "Next13 Rendering Concepts Storybook",
+  "name": "@movie-magic/movie-magic-storybook",
+  "description": "Movie Magic Storybook",
   "private": true,
   "version": "0.0.1",
   "scripts": {
