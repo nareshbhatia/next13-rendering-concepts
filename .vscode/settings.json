@@ -6,6 +6,7 @@
     "copyfiles",
     "nextjs",
     "postdeploy",
+    "tailwindcss",
     "tsup",
     "turborepo"
   ],

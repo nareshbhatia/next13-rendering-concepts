@@ -25,9 +25,8 @@
     }
   },
   "include": [
-    "./vite.config.ts",
+    "./tailwind.config.ts",
     "./.storybook/**/*.ts",
     "./.storybook/**/*.tsx"
-  ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  ]
 }

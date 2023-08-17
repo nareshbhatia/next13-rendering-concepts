@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google';
 import type * as React from 'react';
-import './globals.css';
+import './tailwind.css';
 
 /*
  * Load the Inter font using next/font/google. For details, see
