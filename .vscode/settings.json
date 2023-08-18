@@ -4,6 +4,7 @@
     "clsx",
     "commitlint",
     "copyfiles",
+    "imgur",
     "nextjs",
     "postdeploy",
     "tailwindcss",
