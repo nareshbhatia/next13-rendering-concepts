@@ -9,13 +9,13 @@ import './tailwind.css';
 const inter = Inter({ subsets: ['latin'] });
 
 /*
- * This is causing jest to fail when collecting coverage
+ * Adding this metadata with cause jest to fail when collecting coverage
  * See https://github.com/vercel/next.js/issues/47299
- * export const metadata = {
- *   title: 'Movie Magic',
- *   description: 'Movie Magic',
- * };
  */
+export const metadata = {
+  title: 'Movie Magic',
+  description: 'Movie Magic',
+};
 
 interface RootLayoutProps {
   children: React.ReactNode;

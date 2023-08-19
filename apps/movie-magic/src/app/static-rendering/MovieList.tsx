@@ -9,6 +9,7 @@ async function getMovies(): Promise<Movie[]> {
 }
 
 export async function MoviesList() {
+  console.log('----> Rendering MoviesList');
   const movies = await getMovies();
   return (
     <ul className="divide-y divide-slate-200">
