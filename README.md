@@ -1,5 +1,8 @@
 # Next13 Rendering Concepts
 
+This application is intended to clarify Next.js 13 and (React 18) rendering
+concepts.
+
 This repository was bootstrapped with [Code Shaper](https://code-shaper.dev).
 
 ## Prerequisites for development

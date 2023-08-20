@@ -1,6 +1,6 @@
 {
   "name": "next13-rendering-concepts",
-  "description": "",
+  "description": "Demonstrates Next.js 13 and (React 18) rendering concepts",
   "version": "0.0.1",
   "private": true,
   "repository": {
