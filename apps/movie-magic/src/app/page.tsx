@@ -4,9 +4,9 @@ import * as React from 'react';
 export default function Home() {
   return (
     <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-8 lg:py-12">
-      <div className="relative w-full bg-white px-6 py-12 shadow-xl shadow-slate-700/10 ring-1 ring-gray-900/5 md:mx-auto md:max-w-3xl lg:max-w-4xl lg:pb-28 lg:pt-16">
+      <div className="relative w-full bg-white px-6 py-12 shadow-xl shadow-slate-700/10 ring-1 ring-gray-900/5 md:mx-auto md:max-w-3xl lg:max-w-4xl lg:py-20">
         <div className="mx-auto max-w-prose lg:text-lg">
-          <article className="prose prose-slate mx-auto mt-8 lg:prose-lg prose-a:text-sky-700">
+          <article className="prose prose-slate mx-auto lg:prose-lg prose-a:text-sky-700">
             <h1>Next.js 13 Rendering Concepts</h1>
             <p>
               This application is intended to clarify Next.js 13 and (React 18)
@@ -67,6 +67,14 @@ export default function Home() {
                   <td>Statically Rendered</td>
                   <td>
                     <Link href="/server-component-1">/server-component-1</Link>
+                  </td>
+                </tr>
+                <tr>
+                  <td>No</td>
+                  <td>Cached</td>
+                  <td>Statically Rendered</td>
+                  <td>
+                    <Link href="/server-component-2">/server-component-2</Link>
                   </td>
                 </tr>
               </tbody>

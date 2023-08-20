@@ -5,6 +5,7 @@
     "commitlint",
     "copyfiles",
     "imgur",
+    "logline",
     "navigations",
     "nextjs",
     "postdeploy",

@@ -1,10 +1,7 @@
 import type { Preview } from '@storybook/react';
 
-/*
- * Import any required css here
- * Example:
- * import '@movie-magic/ui-lib/src/styles/main.css';
- */
+// Import any required css here
+import '@movie-magic/movie-magic/src/app/tailwind.css';
 
 const preview: Preview = {
   parameters: {

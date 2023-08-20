@@ -1,12 +1,11 @@
 import { Inter } from 'next/font/google';
-import type * as React from 'react';
 import './tailwind.css';
 
 /*
  * Load the Inter font using next/font/google. For details, see
  * https://beta.nextjs.org/docs/optimizing/fonts
  */
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], variable: '--font-family-sans' });
 
 /*
  * Adding this metadata with cause jest to fail when collecting coverage
@@ -23,8 +22,8 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html className={inter.variable} lang="en">
+      <body>{children}</body>
     </html>
   );
 }
