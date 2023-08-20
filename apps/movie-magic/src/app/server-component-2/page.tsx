@@ -5,8 +5,9 @@ import type { Movie } from '@/models';
 
 async function getMovies(): Promise<Movie[]> {
   const { API_URL } = process.env;
-  console.log('----> API_URL', API_URL);
-  const resMovies = await fetch(`${API_URL}/top-10-movies`);
+  const url = `${API_URL}/top-10-movies`;
+  console.log('----> HTTP GET', url);
+  const resMovies = await fetch(url);
   return resMovies.json() as Promise<Movie[]>;
 }
 

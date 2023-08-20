@@ -77,6 +77,16 @@ export default function Home() {
                     <Link href="/server-component-2">/server-component-2</Link>
                   </td>
                 </tr>
+                <tr>
+                  <td>Yes</td>
+                  <td>Cached</td>
+                  <td>Dynamically Rendered (not working)</td>
+                  <td>
+                    <Link href="/server-component-3?q=top-10">
+                      /server-component-3?q=top-10
+                    </Link>
+                  </td>
+                </tr>
               </tbody>
             </table>
           </article>
