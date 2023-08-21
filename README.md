@@ -1,8 +1,9 @@
 # Next.js 13 Rendering Concepts
 
 This application is intended to clarify Next.js 13 (and React 18) rendering
-concepts. Check out the
-[live demo](https://next13-rendering-concepts-movie-magic.vercel.app/).
+concepts.
+
+**Live Demo**: https://next13-rendering-concepts-movie-magic.vercel.app/
 
 This repository was bootstrapped with [Code Shaper](https://code-shaper.dev).
 
