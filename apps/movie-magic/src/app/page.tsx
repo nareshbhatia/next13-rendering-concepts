@@ -9,7 +9,7 @@ export default function Home() {
           <article className="prose prose-slate mx-auto lg:prose-lg prose-a:text-sky-700">
             <h1>Next.js 13 Rendering Concepts</h1>
             <p>
-              This application is intended to clarify Next.js 13 and (React 18)
+              This application is intended to clarify Next.js 13 (and React 18)
               rendering concepts. Note that I am intentionally staying away from
               terms like CSR and SSR, SPAs and MPAs, as these terms come with
               lots of assumptions and baggage. For example, in Next.js 13, a
@@ -63,7 +63,7 @@ export default function Home() {
               <tbody>
                 <tr>
                   <td>No</td>
-                  <td>No</td>
+                  <td>No Data</td>
                   <td>Statically Rendered</td>
                   <td>
                     <Link href="/server-component-1">/server-component-1</Link>
@@ -78,13 +78,21 @@ export default function Home() {
                   </td>
                 </tr>
                 <tr>
-                  <td>Yes</td>
+                  <td>Yes (searchParams)</td>
                   <td>Cached</td>
-                  <td>Dynamically Rendered (not working)</td>
+                  <td>Dynamically Rendered</td>
                   <td>
                     <Link href="/server-component-3?q=top-10">
                       /server-component-3?q=top-10
                     </Link>
+                  </td>
+                </tr>
+                <tr>
+                  <td>No</td>
+                  <td>Not Cached (x)</td>
+                  <td>Dynamically Rendered</td>
+                  <td>
+                    <Link href="/server-component-4">/server-component-4</Link>
                   </td>
                 </tr>
               </tbody>

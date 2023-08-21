@@ -6,7 +6,6 @@ export interface MovieItemProps {
 }
 
 export function MovieItem({ movie }: MovieItemProps) {
-  console.log('----> Rendering MovieItem');
   return (
     <article className="flex items-start space-x-6 p-6">
       <Image

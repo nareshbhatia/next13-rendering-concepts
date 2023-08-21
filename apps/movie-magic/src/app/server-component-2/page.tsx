@@ -7,10 +7,16 @@ async function getMovies(): Promise<Movie[]> {
   const { API_URL } = process.env;
   const url = `${API_URL}/top-10-movies`;
   console.log('----> HTTP GET', url);
+  // ----- Cached Data -----
   const resMovies = await fetch(url);
   return resMovies.json() as Promise<Movie[]>;
 }
 
+/**
+ * No dynamic functions
+ * Cached Data
+ * Hence statically rendered
+ */
 export default async function ServerComponent2() {
   console.log('----> Rendering ServerComponent2');
   const movies = await getMovies();

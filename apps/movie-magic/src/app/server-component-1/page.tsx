@@ -1,6 +1,11 @@
 import { Footer } from '@/components/Footer';
 import { Title } from '@/components/Title';
 
+/**
+ * No dynamic functions
+ * No Data
+ * Hence statically rendered
+ */
 export default function ServerComponent1() {
   console.log('----> Rendering ServerComponent1');
   return (
