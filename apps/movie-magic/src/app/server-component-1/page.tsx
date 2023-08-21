@@ -3,7 +3,7 @@ import { Title } from '@/components/Title';
 
 /**
  * No dynamic functions
- * No Data
+ * No data
  * Hence statically rendered
  */
 export default function ServerComponent1() {

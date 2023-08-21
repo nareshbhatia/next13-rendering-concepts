@@ -14,7 +14,7 @@ async function getMovies(): Promise<Movie[]> {
 
 /**
  * No dynamic functions
- * No cached Data
+ * No cached data
  * Hence dynamically rendered
  * TODO: Calls API only once, then on, seems to be caching results
  */

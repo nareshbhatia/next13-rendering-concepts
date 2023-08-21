@@ -27,29 +27,30 @@ async function getMovies({ q, cert }: SearchParams): Promise<Movie[]> {
   const { API_URL } = process.env;
   const url = `${API_URL}/movies?${searchParamsString}`;
   console.log('----> HTTP GET', url);
-  // ----- Cached Data -----
-  const resMovies = await fetch(url);
+  // ----- No Cached Data -----
+  const resMovies = await fetch(url, { cache: 'no-store' });
   return resMovies.json() as Promise<Movie[]>;
 }
 
-export interface ServerComponent3Props {
+export interface ServerComponent5Props {
   searchParams: SearchParams;
 }
 
 /**
  * Dynamic function: searchParams
- * Cached data
+ * No cached data
  * Hence dynamically rendered
+ * TODO: Calls API only once, then on, seems to be caching results
  */
-export default async function ServerComponent3({
+export default async function ServerComponent5({
   searchParams,
-}: ServerComponent3Props) {
-  console.log('----> Rendering ServerComponent3');
+}: ServerComponent5Props) {
+  console.log('----> Rendering ServerComponent5');
   console.log('----> searchParams', searchParams);
   const movies = await getMovies(searchParams);
   return (
     <div className="p-8">
-      <Title>Server Component 3</Title>
+      <Title>Server Component 5</Title>
       <MovieTable movies={movies} />
       <Footer />
     </div>

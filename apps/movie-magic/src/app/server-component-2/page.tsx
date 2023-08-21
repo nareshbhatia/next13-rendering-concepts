@@ -14,7 +14,7 @@ async function getMovies(): Promise<Movie[]> {
 
 /**
  * No dynamic functions
- * Cached Data
+ * Cached data
  * Hence statically rendered
  */
 export default async function ServerComponent2() {
