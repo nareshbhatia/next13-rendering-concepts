@@ -8,48 +8,8 @@ export default function Home() {
         <div className="mx-auto max-w-prose lg:text-lg">
           <article className="prose prose-slate prose-sky mx-auto">
             <h1>Next.js 13 Rendering Concepts</h1>
-            <p>
-              This application is intended to clarify Next.js 13 (and React 18)
-              rendering concepts. Note that I am intentionally staying away from
-              terms like CSR and SSR, SPAs and MPAs, as these terms come with
-              lots of assumptions and baggage. For example, in Next.js 13, a
-              client component does not automatically imply client-side
-              rendering (CSR). During the initial page load, a client component
-              is rendered to a static HTML preview on the server so that the
-              user can see the content of the page immediately, without having
-              to wait for the JavaScript bundle to download. On subsequent
-              navigations to this page, client components are rendered entirely
-              on the client, without the server-rendered HTML.
-            </p>
 
             <h2>Server Components</h2>
-            <p>
-              Server components are <strong>always</strong> rendered on the
-              server. There are three subsets of server rendering: Static,
-              Dynamic, and Streaming.
-            </p>
-            <ol>
-              <li>
-                <strong>Static Rendering</strong>: Routes are rendered at{' '}
-                <strong>build time</strong>, and the result is cached. This
-                optimization allows you to share the result of the rendering
-                work between users and server requests.
-              </li>
-              <li>
-                <strong>Dynamic Rendering</strong>: Routes are rendered at{' '}
-                <strong>request time</strong>. This is useful when a route has
-                data that is personalized to the user or has information that
-                can only be known at request time, such as cookies or the
-                URL&apos;s search params.
-              </li>
-              <li>
-                <strong>Streaming</strong>: Routes are rendered at{' '}
-                <strong>request time</strong>, and the work is split into chunks
-                and streamed to the client as it becomes ready. This allows the
-                user to see a preview of the page before it is fully rendered.
-              </li>
-            </ol>
-
             <h3>Examples</h3>
             <table>
               <thead>
@@ -110,22 +70,13 @@ export default function Home() {
 
             <h2>Client Components</h2>
             <p>
-              Client components allow us to write interactive UI that can be
-              rendered on the client at request time. During the initial page
-              load, a client component is rendered to a static HTML preview on
-              the server so that the user can see the content of the page
-              immediately, without having to wait for the JavaScript bundle to
-              download. On subsequent navigations to this page, client
-              components are rendered entirely on the client, without the
-              server-rendered HTML.
+              Example:{' '}
+              <Link href="/client-component-1">/client-component-1</Link>
             </p>
-
-            <h3>Example</h3>
-            <Link href="/client-component-1">/client-component-1</Link>
 
             <h2>Movie Magic - A Realistic Example</h2>
             <p>
-              We have created a realistic example in two ways to show the
+              This is a realistic example implemented in two ways to show the
               performance benefits of React 18 and Next.js:
             </p>
             <ol>

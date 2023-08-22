@@ -5,7 +5,51 @@ concepts.
 
 **Live Demo**: https://next13-rendering-concepts-movie-magic.vercel.app/
 
-This repository was bootstrapped with [Code Shaper](https://code-shaper.dev).
+Note that I am intentionally staying away from terms like CSR and SSR, SPAs and
+MPAs, as these terms come with lots of assumptions and baggage. For example, in
+Next.js 13, a client component does not automatically imply client-side
+rendering (CSR). During the initial page load, a client component is rendered to
+a static HTML preview on the server so that the user can see the content of the
+page immediately, without having to wait for the JavaScript bundle to download.
+On subsequent navigations to this page, client components are rendered entirely
+on the client, without the server-rendered HTML.
+
+## Server Components
+
+Server components are **always** rendered on the server. There are three subsets
+of server rendering: Static, Dynamic, and Streaming.
+
+1.  **Static Rendering**: Routes are rendered at **build time**, and the result
+    is cached. This optimization allows you to share the result of the rendering
+    work between users and server requests.
+2.  **Dynamic Rendering**: Routes are rendered at **request time**. This is
+    useful when a route has data that is personalized to the user or has
+    information that can only be known at request time, such as cookies or the
+    URL's search params.
+3.  **Streaming**: Routes are rendered at **request time**, and the work is
+    split into chunks and streamed to the client as it becomes ready. This
+    allows the user to see a preview of the page before it is fully rendered.
+
+## Client Components
+
+Client components allow us to write interactive UI that can be rendered on the
+client at request time. During the initial page load, a client component is
+rendered to a static HTML preview on the server so that the user can see the
+content of the page immediately, without having to wait for the JavaScript
+bundle to download. On subsequent navigations to this page, client components
+are rendered entirely on the client, without the server-rendered HTML.
+
+## Movie Magic – A Realistic Example
+
+This is a realistic example implemented in two ways to show the performance
+benefits of React 18 and Next.js:
+
+1. Movie Magic CSR: This version uses Client-Side Rendering (CSR), which is the
+   old way (pre React 18)
+2. Movie Magic RSC: This version uses React Server Components for data fetching,
+   and React Client Components for interactivity.
+
+> This repository was bootstrapped with [Code Shaper](https://code-shaper.dev).
 
 ## Prerequisites for development
 
@@ -14,10 +58,36 @@ This repository was bootstrapped with [Code Shaper](https://code-shaper.dev).
 
 ## Getting Started
 
+Run this application in prod mode to observe its real behavior in production.
+You can run it in dev mode but the observations may be a bit confusing.
+
+We will run the Movie Magic API in a local Express server so that we can observe
+when the API's are called to fetch data vs. getting data from the application
+cache. To do this, change `apps/movie-magic/.env` as follows:
+
+```
+API_URL=http://localhost:8080
+NEXT_PUBLIC_API_URL=http://localhost:8080
+```
+
+Now execute the following commands in the repo's root directory:
+
 ```shell
-nvm use        # use the required version of node
-npm ci         # install dependencies
-npm run dev    # run apps and storybook
+nvm use   # use the required version of node
+npm ci    # install dependencies
+
+# Build and start the API server
+npm run build --workspace=@movie-magic/movie-magic-api
+npm start --workspace=@movie-magic/movie-magic-api
+```
+
+Open a new shell to build and start the Next.js application. Execute the
+following commands:
+
+```shell
+nvm use
+npm run build --workspace=@movie-magic/movie-magic
+npm start --workspace=@movie-magic/movie-magic
 ```
 
 > Note: Do not run `npm install` or `npm ci` in any of the subdirectories. It
@@ -39,31 +109,14 @@ npm run lint             # runs the linter on all workspaces, useful for debuggi
 npm run test             # runs full build, lint, format, and all tests - run before pushing to remote
 ```
 
-## Common Workflows
+### Dev build
 
-### Creating New Components
+To build all packages and apps for production, run the following command:
 
-Use [Code Shaper](https://www.code-shaper.dev/) to create new components. This
-will give you a good starting point that is consistent with Cruise's coding
-guidelines.
-
-Here's an example of creating a component called `EventList` using Code Shaper:
-
-```sh
-$ npx shaper
-? Which plugin would you like to run? React (@code-shaper/react - generates React applications)
-? Which generator would you like to run? component (generates a component)
-? Component name? (e.g. TextField) EventList
-? Which workspace should this go to? packages/robot-styles
-? Parent directory within workspace? src/components/EventList
-
-Creating EventList...
-  EventList.stories.tsx
-  EventList.test.tsx
-  EventList.tsx
-  index.ts
-
-Done.
+```shell
+nvm use
+npm ci
+npm run dev
 ```
 
 ### Production build
@@ -71,6 +124,7 @@ Done.
 To build all packages and apps for production, run the following command:
 
 ```shell
+nvm use
 npm ci
 npm run build
 ```
