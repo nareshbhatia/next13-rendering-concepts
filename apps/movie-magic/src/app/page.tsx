@@ -6,7 +6,7 @@ export default function Home() {
     <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-8 lg:py-12">
       <div className="relative w-full bg-white px-6 py-12 shadow-xl shadow-slate-700/10 ring-1 ring-gray-900/5 md:mx-auto md:max-w-3xl lg:max-w-4xl lg:py-20">
         <div className="mx-auto max-w-prose lg:text-lg">
-          <article className="prose prose-slate mx-auto lg:prose-lg prose-a:text-sky-700">
+          <article className="prose prose-slate prose-sky mx-auto">
             <h1>Next.js 13 Rendering Concepts</h1>
             <p>
               This application is intended to clarify Next.js 13 (and React 18)
@@ -18,13 +18,13 @@ export default function Home() {
               is rendered to a static HTML preview on the server so that the
               user can see the content of the page immediately, without having
               to wait for the JavaScript bundle to download. On subsequent
-              navigations to this page, Client Components are rendered entirely
+              navigations to this page, client components are rendered entirely
               on the client, without the server-rendered HTML.
             </p>
 
             <h2>Server Components</h2>
             <p>
-              Server Components are <strong>always</strong> rendered on the
+              Server components are <strong>always</strong> rendered on the
               server. There are three subsets of server rendering: Static,
               Dynamic, and Streaming.
             </p>
@@ -55,7 +55,7 @@ export default function Home() {
               <thead>
                 <tr>
                   <th>Dynamic Functions</th>
-                  <th>Data</th>
+                  <th>Data Cached</th>
                   <th>Rendering</th>
                   <th>Example</th>
                 </tr>
@@ -63,7 +63,7 @@ export default function Home() {
               <tbody>
                 <tr>
                   <td>No</td>
-                  <td>No Data</td>
+                  <td>N/A (No Data)</td>
                   <td>Statically Rendered</td>
                   <td>
                     <Link href="/server-component-1">/server-component-1</Link>
@@ -71,15 +71,15 @@ export default function Home() {
                 </tr>
                 <tr>
                   <td>No</td>
-                  <td>Cached</td>
+                  <td>Yes</td>
                   <td>Statically Rendered</td>
                   <td>
                     <Link href="/server-component-2">/server-component-2</Link>
                   </td>
                 </tr>
                 <tr>
-                  <td>Yes (searchParams)</td>
-                  <td>Cached</td>
+                  <td>Yes</td>
+                  <td>Yes</td>
                   <td>Dynamically Rendered</td>
                   <td>
                     <Link href="/server-component-3?q=top-10">
@@ -89,15 +89,15 @@ export default function Home() {
                 </tr>
                 <tr>
                   <td>No</td>
-                  <td>Not Cached (x)</td>
+                  <td>No</td>
                   <td>Dynamically Rendered</td>
                   <td>
                     <Link href="/server-component-4">/server-component-4</Link>
                   </td>
                 </tr>
                 <tr>
-                  <td>Yes (searchParams)</td>
-                  <td>Not Cached (x)</td>
+                  <td>Yes</td>
+                  <td>No</td>
                   <td>Dynamically Rendered</td>
                   <td>
                     <Link href="/server-component-5?q=top-10">
@@ -107,6 +107,21 @@ export default function Home() {
                 </tr>
               </tbody>
             </table>
+
+            <h2>Client Components</h2>
+            <p>
+              Client components allow us to write interactive UI that can be
+              rendered on the client at request time. During the initial page
+              load, a client component is rendered to a static HTML preview on
+              the server so that the user can see the content of the page
+              immediately, without having to wait for the JavaScript bundle to
+              download. On subsequent navigations to this page, client
+              components are rendered entirely on the client, without the
+              server-rendered HTML.
+            </p>
+
+            <h3>Example</h3>
+            <Link href="/client-component-1">/client-component-1</Link>
           </article>
         </div>
       </div>
