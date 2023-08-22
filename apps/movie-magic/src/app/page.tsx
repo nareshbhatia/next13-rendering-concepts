@@ -122,6 +122,24 @@ export default function Home() {
 
             <h3>Example</h3>
             <Link href="/client-component-1">/client-component-1</Link>
+
+            <h2>Movie Magic - A Realistic Example</h2>
+            <p>
+              We have created a realistic example in two ways to show the
+              performance benefits of React 18 and Next.js:
+            </p>
+            <ol>
+              <li>
+                <Link href="/movie-magic-csr">Movie Magic CSR</Link>: This
+                version uses Client-Side Rendering (CSR), which is the old way
+                (pre React 18)
+              </li>
+              <li>
+                <Link href="/movie-magic-rsc">Movie Magic RSC</Link>: This
+                version uses React Server Components for data fetching, and
+                React Client Components for interactivity.
+              </li>
+            </ol>
           </article>
         </div>
       </div>

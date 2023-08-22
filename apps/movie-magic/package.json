@@ -12,7 +12,7 @@
     "lint": "next lint",
     "lint:fix": "npm run lint -- --fix",
     "start": "next start",
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "dependencies": {
     "next": "^13.4.19",

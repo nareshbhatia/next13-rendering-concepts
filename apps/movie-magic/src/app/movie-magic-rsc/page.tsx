@@ -1,4 +1,4 @@
-import { MovieList } from '@/components/MovieList';
+import { MovieList } from './MovieList';
 import type { Movie } from '@/models';
 
 async function getMovies(): Promise<Movie[]> {
@@ -9,8 +9,8 @@ async function getMovies(): Promise<Movie[]> {
   return resMovies.json() as Promise<Movie[]>;
 }
 
-export default async function StaticRenderingPage() {
-  console.log('----> Rendering StaticRenderingPage');
+export default async function MovieMagicRsc() {
+  console.log('----> Rendering Movie Magic RSC');
   const movies = await getMovies();
   return (
     <div className="mx-auto max-w-3xl p-4">
