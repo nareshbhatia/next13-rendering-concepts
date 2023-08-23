@@ -1,4 +1,6 @@
 import type { Movie } from '@/models';
+import { HeartIcon as HeartOutline } from '@heroicons/react/24/outline';
+import { HeartIcon as HeartSolid } from '@heroicons/react/24/solid';
 import Image from 'next/image';
 
 export interface MovieItemProps {
@@ -29,6 +31,15 @@ export function MovieItem({ movie }: MovieItemProps) {
             </dt>
             <dd>{movie.rating.toFixed(1)}</dd>
           </div>
+
+          <div className="absolute right-2 flex items-center space-x-1">
+            <label className="relative inline-flex cursor-pointer items-center">
+              <input className="peer sr-only" type="checkbox" />
+              <HeartOutline className="peer block h-6 w-6 text-sky-500 peer-checked:hidden" />
+              <HeartSolid className="peer hidden h-6 w-6 text-sky-500 peer-checked:block" />
+            </label>
+          </div>
+
           <div>
             <dt className="sr-only">Rating</dt>
             <dd className="rounded px-1.5 ring-1 ring-slate-200">
