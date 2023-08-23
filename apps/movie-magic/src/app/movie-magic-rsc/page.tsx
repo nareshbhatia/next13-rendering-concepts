@@ -4,7 +4,7 @@ import type { Movie } from '@/models';
 
 async function getMovies(): Promise<Movie[]> {
   const { API_URL } = process.env;
-  const url = `${API_URL}/top-10-movies`;
+  const url = `${API_URL}/movies`;
   console.log('----> HTTP GET', url);
   // ----- No Cached Data -----
   const resMovies = await fetch(url, { cache: 'no-store' });
@@ -17,7 +17,7 @@ export default async function MovieMagicRsc() {
   return (
     <div className="mx-auto max-w-3xl p-4">
       <div className="divide-y divide-slate-200">
-        <Nav>Hello World</Nav>
+        <Nav />
         <MovieList movies={movies} />
       </div>
     </div>
