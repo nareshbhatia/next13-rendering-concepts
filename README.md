@@ -1,5 +1,7 @@
 # Next.js 13 Rendering Concepts
 
+> This repository was bootstrapped with [Code Shaper](https://code-shaper.dev).
+
 This application is intended to clarify Next.js 13 (and React 18) rendering
 concepts.
 
@@ -48,8 +50,6 @@ benefits of React 18 and Next.js:
    old way (pre React 18)
 2. Movie Magic RSC: This version uses React Server Components for data fetching,
    and React Client Components for interactivity.
-
-> This repository was bootstrapped with [Code Shaper](https://code-shaper.dev).
 
 ## Prerequisites for development
 

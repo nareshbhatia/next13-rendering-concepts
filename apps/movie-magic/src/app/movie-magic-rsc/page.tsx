@@ -2,18 +2,45 @@ import { MovieList } from './MovieList';
 import { Nav } from './Nav';
 import type { Movie } from '@/models';
 
-async function getMovies(): Promise<Movie[]> {
+interface SearchParams {
+  q?: string;
+  cert?: string[] | string;
+}
+
+async function getMovies({ q, cert }: SearchParams): Promise<Movie[]> {
+  // create searchParamsString
+  const urlSearchParams = new URLSearchParams();
+  if (q !== undefined) urlSearchParams.append('q', q);
+  if (cert !== undefined) {
+    if (typeof cert === 'string') {
+      urlSearchParams.append('cert', cert);
+    } else {
+      cert.forEach((certString) => {
+        urlSearchParams.append('cert', certString);
+      });
+    }
+  }
+  const searchParamsString = urlSearchParams.toString();
+
+  // call the api
   const { API_URL } = process.env;
-  const url = `${API_URL}/movies`;
+  const url = `${API_URL}/movies?${searchParamsString}`;
   console.log('----> HTTP GET', url);
   // ----- No Cached Data -----
   const resMovies = await fetch(url, { cache: 'no-store' });
   return resMovies.json() as Promise<Movie[]>;
 }
 
-export default async function MovieMagicRsc() {
+export interface MovieMagicRscProps {
+  searchParams: SearchParams;
+}
+
+export default async function MovieMagicRsc({
+  searchParams,
+}: MovieMagicRscProps) {
   console.log('----> Rendering Movie Magic RSC');
-  const movies = await getMovies();
+  console.log('----> searchParams', searchParams);
+  const movies = await getMovies(searchParams);
   return (
     <div className="mx-auto max-w-3xl p-4">
       <div className="divide-y divide-slate-200">
