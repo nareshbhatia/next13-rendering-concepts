@@ -1,5 +1,11 @@
 {
   "_links": {
+    "movies": {
+      "href": "/movies"
+    },
+    "plan-members": {
+      "href": "/plan-members"
+    },
     "top-10-movies": {
       "href": "/top-10-movies"
     }

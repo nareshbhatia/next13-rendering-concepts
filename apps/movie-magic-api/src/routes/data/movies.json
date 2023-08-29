@@ -3,60 +3,182 @@
     "id": "1001",
     "name": "The Shawshank Redemption",
     "year": 1994,
-    "rating": 9.3
+    "rating": 9.3,
+    "photoUrl": "https://i.imgur.com/M9Ourpr.jpg",
+    "certification": "R",
+    "genres": ["Drama", "Crime"],
+    "cast": ["Tim Robbins", "Morgan Freeman"],
+    "runtime": 142,
+    "favorite": false,
+    "tagline": "Fear can hold you prisoner. Hope can set you free.",
+    "logline": "Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion."
   },
   {
     "id": "1002",
     "name": "The Godfather",
     "year": 1972,
-    "rating": 9.2
+    "rating": 9.2,
+    "photoUrl": "https://i.imgur.com/0rQ3NE5.jpg",
+    "certification": "R",
+    "genres": ["Drama", "Crime"],
+    "cast": ["Marlon Brando", "Al Pacino"],
+    "runtime": 175,
+    "tagline": "An offer you can't refuse.",
+    "favorite": false,
+    "logline": "The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son."
   },
   {
     "id": "1003",
     "name": "The Godfather: Part II",
     "year": 1974,
-    "rating": 9.0
+    "rating": 9.0,
+    "photoUrl": "https://i.imgur.com/5eKaOxa.jpg",
+    "certification": "R",
+    "genres": ["Drama", "Crime"],
+    "cast": ["Al Pacino", "Robert Duvall"],
+    "runtime": 202,
+    "tagline": "I don't feel I have to wipe everybody out, Tom. Just my enemies.",
+    "favorite": false,
+    "logline": "The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate."
   },
   {
     "id": "1004",
     "name": "The Dark Knight",
     "year": 2008,
-    "rating": 9.0
+    "rating": 9.0,
+    "photoUrl": "https://i.imgur.com/kZfaz9h.jpg",
+    "certification": "PG-13",
+    "genres": ["Drama", "Action", "Crime", "Thriller"],
+    "cast": ["Christian Bale", "Heath Ledger"],
+    "runtime": 152,
+    "tagline": "Welcome to a world without rules.",
+    "favorite": false,
+    "logline": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice."
   },
   {
     "id": "1005",
     "name": "12 Angry Men",
     "year": 1957,
-    "rating": 8.9
+    "rating": 8.9,
+    "photoUrl": "https://i.imgur.com/Dmdt48s.jpg",
+    "certification": "NR",
+    "genres": ["Drama"],
+    "cast": ["Martin Balsam", "John Fiedler"],
+    "runtime": 97,
+    "tagline": "Life is in their hands. Death is on their minds.",
+    "favorite": false,
+    "logline": "The jury in a New York City murder trial is frustrated by a single member whose skeptical caution forces them to more carefully consider the evidence before jumping to a hasty verdict."
   },
   {
     "id": "1006",
     "name": "Schindler's List",
     "year": 1993,
-    "rating": 8.9
+    "rating": 8.9,
+    "photoUrl": "https://i.imgur.com/NUNRpDN.jpg",
+    "certification": "R",
+    "genres": ["Drama", "History", "War"],
+    "cast": ["Liam Neeson", "Ben Kingsley"],
+    "runtime": 195,
+    "tagline": "Whoever saves one life, saves the world entire.",
+    "favorite": false,
+    "logline": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis."
   },
   {
     "id": "1007",
     "name": "The Lord Of The Rings: The Return Of The King",
     "year": 2003,
-    "rating": 8.9
+    "rating": 8.9,
+    "photoUrl": "https://i.imgur.com/2BZgLuv.jpg",
+    "certification": "PG-13",
+    "genres": ["Adventure", "Fantasy", "Action"],
+    "cast": ["Elijah Wood", "Sean Astin"],
+    "runtime": 201,
+    "tagline": "The eye of the enemy is moving.",
+    "favorite": false,
+    "logline": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring."
   },
   {
     "id": "1008",
     "name": "Pulp Fiction",
     "year": 1994,
-    "rating": 8.9
+    "rating": 8.9,
+    "photoUrl": "https://i.imgur.com/JS9pjeQ.jpg",
+    "certification": "R",
+    "genres": ["Thriller", "Crime"],
+    "cast": ["John Travolta", "Samuel L. Jackson", "Uma Thurman"],
+    "runtime": 154,
+    "tagline": "Just because you are a character doesn't mean you have character.",
+    "favorite": false,
+    "logline": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption."
   },
   {
     "id": "1009",
     "name": "The Good, The Bad And The Ugly",
     "year": 1966,
-    "rating": 8.8
+    "rating": 8.8,
+    "photoUrl": "https://i.imgur.com/QcGjdxZ.jpg",
+    "certification": "R",
+    "genres": ["Western"],
+    "cast": ["Clint Eastwood", "Eli Wallach"],
+    "runtime": 161,
+    "tagline": "For three men the Civil War wasn't hell. It was practice.",
+    "favorite": false,
+    "logline": "A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery."
   },
   {
     "id": "1010",
     "name": "The Lord Of The Rings: The Fellowship Of The Rings",
     "year": 2001,
-    "rating": 8.8
+    "rating": 8.8,
+    "photoUrl": "https://i.imgur.com/kcfYpd2.jpg",
+    "certification": "PG-13",
+    "genres": ["Adventure", "Fantasy", "Action"],
+    "cast": ["Elijah Wood", "Ian McKellen"],
+    "runtime": 179,
+    "tagline": "One ring to rule them all.",
+    "favorite": false,
+    "logline": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron."
+  },
+  {
+    "id": "1011",
+    "name": "Barbie",
+    "year": 2023,
+    "rating": 7.4,
+    "photoUrl": "https://i.imgur.com/i8cKRH6.jpg",
+    "certification": "PG-13",
+    "genres": ["Comedy", "Adventure", "Fantasy"],
+    "cast": ["Margot Robbie", "Ryan Gosling"],
+    "runtime": 114,
+    "tagline": "She's everything. He's just Ken.",
+    "favorite": false,
+    "logline": "Barbie and Ken are having the time of their lives in the colorful and seemingly perfect world of Barbie Land. However, when they get a chance to go to the real world, they soon discover the joys and perils of living among humans."
+  },
+  {
+    "id": "1012",
+    "name": "Oppenheimer",
+    "year": 2023,
+    "rating": 8.6,
+    "photoUrl": "https://i.imgur.com/yyS6HgH.jpg",
+    "certification": "R",
+    "genres": ["Drama", "History"],
+    "cast": ["Cillian Murphy", "Emily Blunt"],
+    "runtime": 181,
+    "tagline": "The world forever changes.",
+    "favorite": false,
+    "logline": "The story of J. Robert Oppenheimer’s role in the development of the atomic bomb during World War II."
+  },
+  {
+    "id": "1013",
+    "name": "Mission: Impossible - Dead Reckoning Part One",
+    "year": 2023,
+    "rating": 8.0,
+    "photoUrl": "https://i.imgur.com/VYdBZy1.jpg",
+    "certification": "PG-13",
+    "genres": ["Action", "Adventure", "Thriller"],
+    "cast": ["Tom Cruise", "Hayley Atwell"],
+    "runtime": 164,
+    "tagline": "We all share the same fate.",
+    "favorite": false,
+    "logline": "Ethan Hunt and his IMF team must track down a dangerous weapon before it falls into the wrong hands."
   }
 ]
