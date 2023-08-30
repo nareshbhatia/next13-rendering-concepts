@@ -1,5 +1,5 @@
 import { MovieList } from './MovieList';
-import { Nav } from './Nav';
+import { Nav } from '@/components/Nav';
 import type { Movie } from '@/models';
 
 interface SearchParams {
