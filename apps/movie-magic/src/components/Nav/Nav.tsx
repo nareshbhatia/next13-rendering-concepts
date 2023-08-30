@@ -3,11 +3,12 @@
 import { CertCheckbox } from './CertCheckbox';
 import { QuerySelector } from './QuerySelector';
 import Link from 'next/link';
-import { useRouter, useSearchParams } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import type { ChangeEvent } from 'react';
 
 export function Nav() {
   const router = useRouter();
+  const pathname = usePathname();
   const searchParams = useSearchParams();
   const q = searchParams.getAll('q').map((param) => param.toLowerCase());
   const cert = searchParams.getAll('cert').map((param) => param.toUpperCase());
@@ -28,7 +29,7 @@ export function Nav() {
     const searchParamsString = urlSearchParams.toString();
 
     // navigate
-    const url = `/movie-magic-rsc?${searchParamsString}`;
+    const url = `${pathname}?${searchParamsString}`;
     console.log('----> navigate to', url);
     router.push(url);
   };

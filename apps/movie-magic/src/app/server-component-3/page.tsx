@@ -1,12 +1,7 @@
 import { Footer } from '@/components/Footer';
 import { MovieTable } from '@/components/MovieTable';
 import { Title } from '@/components/Title';
-import type { Movie } from '@/models';
-
-interface SearchParams {
-  q?: string;
-  cert?: string[] | string;
-}
+import type { Movie, SearchParams } from '@/models';
 
 async function getMovies({ q, cert }: SearchParams): Promise<Movie[]> {
   // create searchParamsString
