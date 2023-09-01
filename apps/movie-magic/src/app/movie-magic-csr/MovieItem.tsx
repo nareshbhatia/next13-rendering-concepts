@@ -1,5 +1,6 @@
 import { FavoriteToggle } from './FavoriteToggle';
 import type { Movie } from '@/models';
+import { toHoursAndMinutes } from '@/utils';
 import Image from 'next/image';
 
 export interface MovieItemProps {
@@ -7,6 +8,8 @@ export interface MovieItemProps {
 }
 
 export function MovieItem({ movie }: MovieItemProps) {
+  const runtime = toHoursAndMinutes(movie.runtime);
+
   return (
     <article className="flex items-start space-x-6 p-6">
       <Image
@@ -72,7 +75,7 @@ export function MovieItem({ movie }: MovieItemProps) {
               >
                 <circle cx="1" cy="1" r="1" />
               </svg>
-              {movie.runtime}
+              {runtime.hours}h {runtime.minutes}m
             </dd>
           </div>
           <div className="mt-2 w-full flex-none font-normal">
