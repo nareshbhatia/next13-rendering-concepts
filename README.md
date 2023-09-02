@@ -90,6 +90,17 @@ npm run build --workspace=@movie-magic/movie-magic
 npm start --workspace=@movie-magic/movie-magic
 ```
 
+### Optional steps to build the Vite app (traditional CSR)
+
+Open a new shell to build and start the Vite application. Execute the following
+commands:
+
+```shell
+nvm use
+npm run build --workspace=@movie-magic/movie-magic-vite
+npm run preview --workspace=@movie-magic/movie-magic-vite
+```
+
 > Note: Do not run `npm install` or `npm ci` in any of the subdirectories. It
 > will break the build. There should be only one `package-lock.json` file in the
 > entire repo (at the root).

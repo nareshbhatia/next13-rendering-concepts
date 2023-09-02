@@ -1,0 +1,11 @@
+!.*
+/.turbo/
+/coverage/
+/dist/
+/node_modules/
+/public/mockServiceWorker.js
+.eslintrc.js
+.lintstagedrc.js
+jest.config.js
+vite.config.ts
+src/vite-env.d.ts
