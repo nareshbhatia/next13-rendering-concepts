@@ -26,6 +26,7 @@ export function FavoriteToggle({ movieId, checked }: FavoriteToggleProps) {
       },
     });
 
+    console.log('----> revalidatePath("/movie-magic-rsc")');
     revalidatePath('/movie-magic-rsc');
   }
 

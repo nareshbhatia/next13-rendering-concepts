@@ -1,6 +1,6 @@
+import { useRefreshContext } from './RefreshContextProvider';
 import { HeartIcon as HeartOutline } from '@heroicons/react/24/outline';
 import { HeartIcon as HeartSolid } from '@heroicons/react/24/solid';
-import { useRouter } from 'next/navigation';
 
 export interface FavoriteToggleProps {
   movieId: string;
@@ -8,7 +8,7 @@ export interface FavoriteToggleProps {
 }
 
 export function FavoriteToggle({ movieId, checked }: FavoriteToggleProps) {
-  const router = useRouter();
+  const { refreshCount, setRefreshCount } = useRefreshContext();
 
   const handleChange = async () => {
     // eslint-disable-next-line prefer-destructuring
@@ -25,8 +25,9 @@ export function FavoriteToggle({ movieId, checked }: FavoriteToggleProps) {
       },
     });
 
-    console.log('----> router.refresh()');
-    router.refresh();
+    // Refetch data
+    console.log(`----> setRefreshCount(${refreshCount + 1})`);
+    setRefreshCount(refreshCount + 1);
   };
 
   return (
