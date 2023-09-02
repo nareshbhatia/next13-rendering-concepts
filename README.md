@@ -5,7 +5,10 @@
 This application is intended to clarify Next.js 13 (and React 18) rendering
 concepts.
 
-**Live Demo**: https://next13-rendering-concepts-movie-magic.vercel.app/
+### Live Demos
+
+- Next.js 13: https://next13-rendering-concepts-movie-magic.vercel.app/
+- React/Vite: https://react-rendering-concepts-movie-magic.vercel.app/
 
 Note that I am intentionally staying away from terms like CSR and SSR, SPAs and
 MPAs, as these terms come with lots of assumptions and baggage. For example, in
