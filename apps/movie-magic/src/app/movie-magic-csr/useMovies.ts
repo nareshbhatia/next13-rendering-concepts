@@ -8,19 +8,10 @@ import * as React from 'react';
  */
 export function useMovies() {
   const searchParams = useSearchParams();
-  const q = searchParams.getAll('q').map((param) => param.toLowerCase());
-  const cert = searchParams.getAll('cert').map((param) => param.toUpperCase());
+  const searchParamsString = searchParams.toString();
   const { refreshCount } = useRefreshContext();
-  console.log('----> useMovies, q:', q, 'cert:', cert);
-  console.log('----> refreshCount:', refreshCount);
-
-  // create searchParamsString
-  const urlSearchParams = new URLSearchParams();
-  if (q.length > 0) urlSearchParams.append('q', q[0]);
-  cert.forEach((certString) => {
-    urlSearchParams.append('cert', certString);
-  });
-  const searchParamsString = urlSearchParams.toString();
+  console.log('----> useMovies: searchParams =', searchParamsString);
+  console.log('----> useMovies: refreshCount =', refreshCount);
 
   // eslint-disable-next-line prefer-destructuring
   const NEXT_PUBLIC_API_URL = process.env.NEXT_PUBLIC_API_URL;
@@ -60,6 +51,6 @@ export function useMovies() {
 
     // eslint-disable-next-line @typescript-eslint/no-floating-promises
     fetchMovies();
-  }, [searchParamsString, NEXT_PUBLIC_API_URL, refreshCount]);
+  }, [NEXT_PUBLIC_API_URL, searchParamsString, refreshCount]);
   return { isLoading, isError, error, movies };
 }
