@@ -54,6 +54,8 @@ benefits of React 18 and Next.js:
 2. Movie Magic RSC: This version uses React Server Components for data fetching,
    and React Client Components for interactivity.
 
+![Movie Magic Screenshot](assets/movie-magic-screenshot.png)
+
 ## Prerequisites for development
 
 1. [Node Version Manager](https://github.com/nvm-sh/nvm) (nvm) - allows using
